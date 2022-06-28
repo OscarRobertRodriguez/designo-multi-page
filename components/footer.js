@@ -1,7 +1,5 @@
-import Link from "next/link";
+
 import styled from "styled-components";
-import Image from "next/image";
-import Twitter from "../public/assets/shared/desktop/icon-twitter.svg";
 import CallToAction from "./callToAction";
 import { QUERIES } from "../constants";
 import Icons from "./icons";
