@@ -1,7 +1,9 @@
+import { createContext, useState, useEffect } from "react";
 import { createGlobalStyle } from "styled-components";
 import Footer from "../components/footer";
 import Layout from "../components/layout";
-
+import styled from "styled-components";
+import Link from "next/link";
 const GlobalStyle = createGlobalStyle`
 /*
   1. Use a more-intuitive box-sizing model.
@@ -53,6 +55,8 @@ html {
    --heavy: 700; 
 
    font-family: var(--font-jost);
+   position: relative;
+
 }
 
 
@@ -72,6 +76,8 @@ body {
   grid-template-rows: 1fr;
   font-size: var(--16px);
   line-height: var(--26px);
+
+
 }
 /*
   6. Improve media defaults
@@ -105,9 +111,11 @@ p, h1, h2, h3, h4, h5, h6 {
   width: 100%;
   display: grid;
   grid-template-rows: 1fr min-content;
-  min-height: 100%;
+  height: 100%;
+     /* possible min-height here of 100%  */
   padding: 0 24px;
-  background-color: purple;
+  position: relative;
+
 
 }
 
@@ -137,18 +145,45 @@ h6 {
   font-weight: var(--heavy);
 }
 
-`; 
+`;
 
 
 
+
+
+export const MobileContext = createContext([]);
 
 function MyApp({ Component, pageProps }) {
+  let [open, setOpen] = useState(false);
+  let [isTablet, setTablet] = useState(false);
+
+  useEffect(() => {
+    if (window.innerWidth > 760) {
+      setTablet(true);
+    } else {
+      setTablet(false);
+    }
+
+    const updateMedia = () => {
+      if (window.innerWidth > 760) {
+        setTablet(true);
+      } else {
+        setTablet(false);
+      }
+    };
+    window.addEventListener('resize', updateMedia);
+    return () => window.removeEventListener('resize', updateMedia);
+  }, []);
+
+
   return (
-    <Layout> 
-     <GlobalStyle />
-     <Component {...pageProps} />
-    </Layout>
-  )
+    <MobileContext.Provider value={[open ,setOpen]}>
+      <Layout isTablet={isTablet}>
+        <GlobalStyle />
+        <Component {...pageProps} />
+      </Layout>
+    </MobileContext.Provider>
+  );
 }
 
 export default MyApp;
