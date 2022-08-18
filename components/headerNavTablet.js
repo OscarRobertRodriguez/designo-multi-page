@@ -26,8 +26,15 @@ const HeaderWrapper = styled.div`
   display: grid;
   justify-content: space-between;
 
+  @media ${QUERIES.tabletAndUp} {
+    height: auto;
+    padding-top:35px;
+  }
+
+
   div:first-child {
     height: 27px;
+    cursor: pointer;
   }
 
   ul {
@@ -55,12 +62,14 @@ const HeaderNavTablet = () => {
     <Wrapper>
       <HeaderWrapper>
         <div>
+          <Link href='/'>
           <Image
             src={"/assets/shared/desktop/logo-dark.png"}
             alt="logo"
             width="202px"
             height="27px"
           />
+          </Link>
         </div>
         <List open={open}>
           <li>

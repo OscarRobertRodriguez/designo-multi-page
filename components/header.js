@@ -8,6 +8,7 @@ import { QUERIES } from "../constants";
 import { Portal } from "@reach/portal";
 import HeaderNavTab from "./headerNavTablet";
 
+
 const Wrapper = styled.header`
   height: 96px;
   background-color: var(--white);
@@ -18,6 +19,10 @@ const Wrapper = styled.header`
   top: 0;
   left: 0;
   right: 0;
+
+  @media ${QUERIES.tabletAndUp} {
+    height: auto;
+  }
 
 `;
 
@@ -33,9 +38,14 @@ const HeaderWrapper = styled.div`
   display: grid;
   justify-content: space-between;
 
+  @media ${QUERIES.tabletAndUp} {
+    height: auto;
+  }
+
 
 div:first-child {
   height: 27px;
+  cursor: pointer;
 }
 
 div:last-child {
@@ -137,12 +147,16 @@ export default function Header() {
     <Wrapper>
     <HeaderWrapper>
       <div >
+        <Link href='/'>
+          <a>
         <Image
           src={"/assets/shared/desktop/logo-dark.png"}
           alt="logo"
           width="202px"
           height="27px"
         />
+        </a>
+        </Link>
       </div>
       <div>
         <Image

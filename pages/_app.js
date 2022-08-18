@@ -4,6 +4,7 @@ import Footer from "../components/footer";
 import Layout from "../components/layout";
 import styled from "styled-components";
 import Link from "next/link";
+import { QUERIES } from "../constants";
 const GlobalStyle = createGlobalStyle`
 /*
   1. Use a more-intuitive box-sizing model.
@@ -25,6 +26,7 @@ const GlobalStyle = createGlobalStyle`
 html {
    --peach: hsla(11, 72%, 66%, 1.00); 
    --light-peach: hsla(10, 100%, 80%, 1.00); 
+   --lighter-peach: hsla(14, 76%, 97%, 1); 
    --black: hsla(274, 4%, 11%, 1.00); 
    --dark-grey: hsla(268, 5%, 20%, 1.00); 
    --light-grey: hsl(198, 17%, 96%); 
@@ -44,6 +46,7 @@ html {
    --24px: 1.5rem;
    --26px:  1.625rem;
    --28px: 1.75rem;
+   --36px: 2.25rem;
    --32px: 2rem;
    --40px: 2.5rem;
    --48px: 3rem;
@@ -121,9 +124,14 @@ p, h1, h2, h3, h4, h5, h6 {
 
 
 h1 {
+  font-size: var(--32px);
   font-weight: var(--med);
+  line-height: var(--36px);
+
+  @media ${QUERIES.tabletAndUp} {
   font-size: var(--48px);
   line-height: var(--48px);
+  }
 }
 
 h2 {

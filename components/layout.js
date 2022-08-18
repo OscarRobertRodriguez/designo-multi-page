@@ -8,6 +8,7 @@ import { Portal } from "@reach/portal";
 import Link from "next/link";
 import HeaderNavTablet from "./headerNavTablet";
 import {MobileContext} from '../pages/_app.js';
+import { QUERIES } from "../constants";
 
 
 const Wrapper = styled.div`
@@ -15,7 +16,20 @@ const Wrapper = styled.div`
   display: grid;
   grid-template-rows: min-content 1fr;
   justify-self: center;
+ 
 
+  @media ${QUERIES.tabletAndUp} {
+    padding-top: 29px;
+  }
+
+   main {
+
+
+
+    @media ${QUERIES.tabletAndUp} {
+      padding-top: 50px;
+  }
+   }
 `;
 
 

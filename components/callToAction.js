@@ -109,7 +109,7 @@ const CallToAction = () => {
           our expertise can help your business grow.
         </p>
       </ContentWrapper>
-      <Link href='/contact'>
+      <Link href='/contact' passHref>
       <Button className='button'>get in touch</Button>
       </Link>
     </Wrapper>
