@@ -4,7 +4,7 @@ import { QUERIES } from "../constants";
 import { forwardRef } from "react";
 
 const Wrapper = styled.a`
-  background-color: ${props => props.bg === 'light' ? 'var(--peach)' : 'var(--white)' }; 
+  background-color: ${props => props.bg === 'light' ? 'var(--peach)' : props.bg }; 
   border-radius: 5px;
   width: 152px;
   height: 56px;

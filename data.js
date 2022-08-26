@@ -20,6 +20,11 @@ let graph2 = "/assets/graphic-design/desktop/image-change.jpg";
 let graph3 = "/assets/graphic-design/desktop/image-science.jpg"; 
 
 
+let location1 =  "/assets/shared/desktop/illustration-canada.svg";
+let location2 =  "/assets/shared/desktop/illustration-australia.svg";
+let location3 =  "/assets/shared/desktop/illustration-united-kingdom.svg";
+
+
 const data = [
   {
     "webdesign" : {
@@ -104,7 +109,25 @@ const data = [
                 info: 'A poster made in collaboration with the Federal Art Project'
             },
         ]
-    }
+    },
+
+    "locations": [
+          {
+            location: 'canada',
+             img: location1, 
+             rotateImg: '90deg'
+          },
+          {
+            location: 'australia',
+             img: location2, 
+          },
+          {
+            location: 'united kingdom',
+             img: location3, 
+             rotateImg: '-90deg'
+          },
+    ]
+
 
   }
 ]
