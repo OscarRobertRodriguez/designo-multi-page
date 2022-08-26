@@ -26,6 +26,7 @@ const GlobalStyle = createGlobalStyle`
 html {
    --peach: hsla(11, 72%, 66%, 1.00); 
    --light-peach: hsla(10, 100%, 80%, 1.00); 
+   --pink: hsl(14, 76%, 97%);
    --lighter-peach: hsla(14, 76%, 97%, 1); 
    --black: hsla(274, 4%, 11%, 1.00); 
    --dark-grey: hsla(268, 5%, 20%, 1.00); 

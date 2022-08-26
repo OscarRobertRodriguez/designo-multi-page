@@ -110,7 +110,7 @@ const CallToAction = () => {
         </p>
       </ContentWrapper>
       <Link href='/contact' passHref>
-      <Button className='button'>get in touch</Button>
+      <Button className='button' bg={"var(--white)"}>get in touch</Button>
       </Link>
     </Wrapper>
   );

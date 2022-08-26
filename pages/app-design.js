@@ -4,12 +4,12 @@ import DesignCard from "../components/designCard";
 import ProjectCard from "../components/projectCard";
 import ProjectCards from "../components/projectCards";
 import DesignHeader from "../components/designHeader";
+import AboutCard from "../components/aboutCard";
 import data from "../data";
 
 const appDesk = "/assets/home/desktop/image-app-design.jpg";
 const webDesk = "/assets/home/desktop/image-web-design-large.jpg";
 const graphicDesk = "/assets/home/desktop/image-graphic-design.jpg";
-
 
 
 const Wrapper = styled.div``;
