@@ -101,7 +101,7 @@ const Hero = () => {
           Find out more about our services.
         </p>
         <Link href="/about" passHref>
-          <Button bg="dark">learn more</Button>
+          <Button bg="var(--white)">learn more</Button>
         </Link>
       </ContentWrapper>
     </Wrapper>
