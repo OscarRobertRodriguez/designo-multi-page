@@ -13,6 +13,8 @@ const Wrapper = styled.div`
  background-color: var(--black);
 margin: 0 -24px;
 padding: 0 24px;
+
+
 `;
 
 

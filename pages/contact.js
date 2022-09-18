@@ -1,36 +1,52 @@
+import styled from "styled-components";
+import { QUERIES } from "../constants";
+import data from "../data";
+import LocationCard from "../components/locationCard";
+import ContactCard from "../components/contactCard";
 
 
+
+const Wrapper = styled.div`
+   display: grid;
+   grid-row-gap: 120px;
+`;
+
+const LocationWrapper = styled.div`
+  display: grid;
+  grid-row-gap: 48px;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  padding-top: 764px;
+
+  @media ${QUERIES.tabletAndUp} {
+    grid-row-gap: 58px;
+
+  }
+
+  @media ${QUERIES.desktopAndUp} {
+    grid-auto-flow: column;
+   
+    grid-column-gap: 30px;
+    padding-top: 480px;
+  }
+`;
 
 const Contact = () => {
-
-    
-    return (
-        <div>
-        <h1>contact page</h1>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sagittis nisl rhoncus mattis rhoncus urna neque viverra justo nec. Nec sagittis aliquam malesuada bibendum arcu vitae elementum curabitur vitae. Fermentum iaculis eu non diam phasellus vestibulum lorem sed risus. Sem et tortor consequat id porta nibh venenatis. Arcu odio ut sem nulla pharetra diam sit amet. Eget sit amet tellus cras adipiscing enim eu turpis egestas. Congue nisi vitae suscipit tellus. Mauris ultrices eros in cursus turpis. Non nisi est sit amet facilisis. Nunc faucibus a pellentesque sit amet porttitor. Purus in mollis nunc sed id semper risus in hendrerit. Vitae turpis massa sed elementum tempus. Duis tristique sollicitudin nibh sit amet. Sed elementum tempus egestas sed sed risus pretium quam. Semper eget duis at tellus at. Nibh cras pulvinar mattis nunc sed blandit libero. Aliquam id diam maecenas ultricies. Diam quam nulla porttitor massa. Neque aliquam vestibulum morbi blandit cursus.
-
-Aenean pharetra magna ac placerat vestibulum lectus mauris. Nec ultrices dui sapien eget mi. Ridiculus mus mauris vitae ultricies leo integer. Lorem donec massa sapien faucibus et molestie ac feugiat. Elementum curabitur vitae nunc sed velit dignissim sodales ut. Quis lectus nulla at volutpat diam. Interdum consectetur libero id faucibus nisl tincidunt. Amet tellus cras adipiscing enim. At in tellus integer feugiat scelerisque varius. Eleifend quam adipiscing vitae proin sagittis. Condimentum lacinia quis vel eros donec ac odio tempor orci. Auctor elit sed vulputate mi sit amet mauris commodo quis. Ipsum dolor sit amet consectetur adipiscing elit ut aliquam purus. Elit ut aliquam purus sit. Condimentum id venenatis a condimentum vitae sapien pellentesque habitant.
-
-Facilisis mauris sit amet massa vitae tortor condimentum lacinia quis. Mi eget mauris pharetra et ultrices neque ornare. Nec sagittis aliquam malesuada bibendum arcu vitae elementum curabitur. Vitae purus faucibus ornare suspendisse sed. Id diam maecenas ultricies mi eget. Malesuada fames ac turpis egestas sed tempus urna. Est ante in nibh mauris. Nullam eget felis eget nunc lobortis mattis aliquam. Sem fringilla ut morbi tincidunt augue interdum velit. Eu consequat ac felis donec et odio pellentesque diam. Ultrices in iaculis nunc sed augue. Sagittis orci a scelerisque purus semper eget. Sit amet tellus cras adipiscing enim eu turpis. Vel elit scelerisque mauris pellentesque pulvinar.
-
-Curabitur gravida arcu ac tortor dignissim convallis aenean. Proin fermentum leo vel orci. Bibendum est ultricies integer quis. Id interdum velit laoreet id. Leo in vitae turpis massa sed elementum tempus. Viverra tellus in hac habitasse. Mauris rhoncus aenean vel elit scelerisque mauris pellentesque. Tempor nec feugiat nisl pretium fusce id velit. Vulputate eu scelerisque felis imperdiet proin. Id consectetur purus ut faucibus pulvinar elementum integer. Aenean pharetra magna ac placerat. Mattis rhoncus urna neque viverra. Vitae proin sagittis nisl rhoncus mattis rhoncus urna. Condimentum id venenatis a condimentum. Sem viverra aliquet eget sit. Cursus metus aliquam eleifend mi in nulla. Ipsum suspendisse ultrices gravida dictum fusce. Vestibulum mattis ullamcorper velit sed. Urna et pharetra pharetra massa massa ultricies mi.
-
-Amet risus nullam eget felis. Congue mauris rhoncus aenean vel elit scelerisque mauris pellentesque. Adipiscing enim eu turpis egestas. Nec tincidunt praesent semper feugiat. Molestie a iaculis at erat pellentesque adipiscing commodo elit at. Pellentesque dignissim enim sit amet venenatis. Egestas sed tempus urna et pharetra. Sed felis eget velit aliquet sagittis id. Euismod in pellentesque massa placerat duis ultricies lacus sed turpis. Elementum tempus egestas sed sed risus pretium. Dolor purus non enim praesent elementum facilisis leo vel.
-
-Enim blandit volutpat maecenas volutpat blandit aliquam etiam. Magna fermentum iaculis eu non diam phasellus. Sit amet facilisis magna etiam tempor orci. Mauris vitae ultricies leo integer malesuada. Amet nulla facilisi morbi tempus iaculis urna id volutpat lacus. Leo a diam sollicitudin tempor id eu nisl nunc mi. Bibendum ut tristique et egestas quis ipsum suspendisse ultrices. Erat velit scelerisque in dictum non. Ultrices dui sapien eget mi proin sed libero. Non sodales neque sodales ut etiam sit amet nisl purus. Cras tincidunt lobortis feugiat vivamus at augue. Id leo in vitae turpis massa sed elementum tempus egestas.
-
-Id diam vel quam elementum pulvinar etiam non quam lacus. Consequat nisl vel pretium lectus quam id leo in vitae. Vitae turpis massa sed elementum. Morbi blandit cursus risus at ultrices mi tempus imperdiet. Mattis vulputate enim nulla aliquet porttitor lacus luctus. Scelerisque felis imperdiet proin fermentum leo vel. Venenatis a condimentum vitae sapien pellentesque habitant morbi. Nisl tincidunt eget nullam non nisi est sit amet. Vulputate sapien nec sagittis aliquam malesuada bibendum arcu vitae. Dapibus ultrices in iaculis nunc sed augue. Libero enim sed faucibus turpis. Donec et odio pellentesque diam volutpat commodo sed egestas. Risus sed vulputate odio ut enim blandit. Semper eget duis at tellus at urna. A iaculis at erat pellentesque adipiscing commodo elit at imperdiet. Faucibus purus in massa tempor nec feugiat. Egestas erat imperdiet sed euismod nisi porta lorem mollis. Tellus at urna condimentum mattis pellentesque. Dolor morbi non arcu risus quis varius quam.
-
-Phasellus vestibulum lorem sed risus ultricies tristique nulla. At risus viverra adipiscing at in tellus integer. Velit sed ullamcorper morbi tincidunt ornare massa eget. Vitae suscipit tellus mauris a diam maecenas sed. Ac tincidunt vitae semper quis. Arcu non odio euismod lacinia at quis risus. Sed euismod nisi porta lorem mollis aliquam ut. Nibh praesent tristique magna sit amet. Nullam non nisi est sit amet facilisis magna. Porta non pulvinar neque laoreet suspendisse interdum consectetur. Mollis nunc sed id semper risus in hendrerit gravida rutrum. Pretium aenean pharetra magna ac placerat vestibulum. Accumsan in nisl nisi scelerisque eu ultrices. Quis imperdiet massa tincidunt nunc. Id interdum velit laoreet id donec ultrices tincidunt arcu non. Feugiat nisl pretium fusce id velit. Vitae tortor condimentum lacinia quis vel eros donec ac odio. Nulla facilisi morbi tempus iaculis urna id volutpat lacus laoreet. Mollis aliquam ut porttitor leo a diam sollicitudin tempor id. Dictum varius duis at consectetur lorem.
-
-Lorem ipsum dolor sit amet consectetur adipiscing elit. Scelerisque viverra mauris in aliquam sem fringilla ut. Mus mauris vitae ultricies leo integer malesuada nunc vel. Ultrices in iaculis nunc sed augue lacus viverra. Id semper risus in hendrerit gravida rutrum. Fermentum posuere urna nec tincidunt praesent semper. Nec sagittis aliquam malesuada bibendum arcu vitae elementum curabitur. Enim nec dui nunc mattis enim ut. Maecenas ultricies mi eget mauris pharetra et ultrices neque ornare. Consectetur libero id faucibus nisl. Enim blandit volutpat maecenas volutpat blandit aliquam etiam erat. Nullam ac tortor vitae purus faucibus ornare suspendisse. Vitae nunc sed velit dignissim sodales. Vulputate dignissim suspendisse in est ante in nibh mauris. At ultrices mi tempus imperdiet nulla malesuada pellentesque elit. Accumsan lacus vel facilisis volutpat est velit. Facilisi morbi tempus iaculis urna id volutpat lacus laoreet non. Massa massa ultricies mi quis hendrerit dolor magna eget. Vitae suscipit tellus mauris a diam maecenas sed.
-
-Metus dictum at tempor commodo ullamcorper a lacus vestibulum. Suspendisse ultrices gravida dictum fusce ut placerat orci nulla. Eu augue ut lectus arcu bibendum at varius. Nunc sed velit dignissim sodales ut eu sem integer vitae. Enim lobortis scelerisque fermentum dui faucibus. In aliquam sem fringilla ut morbi tincidunt augue. Sed libero enim sed faucibus turpis in eu. Tristique risus nec feugiat in fermentum. Proin sed libero enim sed faucibus turpis. Nisi scelerisque eu ultrices vitae auctor eu.
-        </p>
-        </div>
-    )
-}; 
-
+  return (
+    <Wrapper>
+      <ContactCard />
+      <LocationWrapper>
+        {data[0].locations.map((item) => (
+          <LocationCard
+            key={item.location}
+            location={item.location}
+            img={item.img}
+            rotateImg={item.rotateImg}
+          />
+        ))}
+      </LocationWrapper>
+    </Wrapper>
+  );
+};
 
 export default Contact;
