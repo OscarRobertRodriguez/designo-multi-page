@@ -10,6 +10,7 @@ const resourceImg = "/assets/home/desktop/illustration-resourceful.svg";
 const Wrapper = styled.div`
   padding-top: 120px;
   padding-bottom: 120px;
+  margin-bottom: 184px;
   display: grid;
   grid-row-gap: 80px;
 
@@ -19,6 +20,7 @@ const Wrapper = styled.div`
      justify-items: center;
      padding-top: 120px;
      padding-bottom: 67px;
+     margin-bottom: 210px;
   }
 
   @media ${QUERIES.desktopAndUp} {
@@ -26,6 +28,7 @@ const Wrapper = styled.div`
       grid-column-gap: 30px;
       padding-bottom: 350px;
       padding-top: 160px;
+      margin-bottom: 0;
      
   }
 `;
