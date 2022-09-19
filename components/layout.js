@@ -4,10 +4,7 @@ import Footer from "./footer";
 import ContactFooter from "./contactFooter";
 import styled from "styled-components";
 import { useRouter } from "next/router";
-import { Portal } from "@reach/portal";
-import Link from "next/link";
 import HeaderNavTablet from "./headerNavTablet";
-import {MobileContext} from '../pages/_app.js';
 import { QUERIES } from "../constants";
 
 

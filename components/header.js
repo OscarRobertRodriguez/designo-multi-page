@@ -6,7 +6,7 @@ import {MobileContext} from '../pages/_app.js';
 import Link from "next/link";
 import { QUERIES } from "../constants";
 import { Portal } from "@reach/portal";
-import HeaderNavTab from "./headerNavTablet";
+
 
 
 const Wrapper = styled.header`

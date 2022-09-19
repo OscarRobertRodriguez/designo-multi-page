@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import styled from "styled-components";
 import { QUERIES } from "../constants";
 import Image from "next/image";
@@ -62,16 +63,17 @@ const HeaderNavTablet = () => {
     <Wrapper>
       <HeaderWrapper>
         <div>
-          <Link href='/'>
-          <Image
+          <Link href='/' passHref>
+          <img
             src={"/assets/shared/desktop/logo-dark.png"}
             alt="logo"
             width="202px"
             height="27px"
+            ref={href}
           />
           </Link>
         </div>
-        <List open={open}>
+        <List>
           <li>
             <Link href="/about">
               <a>Our Company</a>
