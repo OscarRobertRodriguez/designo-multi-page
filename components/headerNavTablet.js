@@ -69,7 +69,6 @@ const HeaderNavTablet = () => {
             alt="logo"
             width="202px"
             height="27px"
-            ref={href}
           />
           </Link>
         </div>

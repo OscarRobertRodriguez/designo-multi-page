@@ -147,7 +147,7 @@ export default function Header() {
     <Wrapper>
     <HeaderWrapper>
       <div >
-        <Link href='/'>
+        <Link href='/' passHref>
           <a>
         <Image
           src={"/assets/shared/desktop/logo-dark.png"}
